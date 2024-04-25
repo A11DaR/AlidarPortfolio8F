@@ -125,7 +125,7 @@
         .right,
         .neon-green-line {
             position: fixed;
-            width: 5px;
+            width: 10px; /* Changed width to 10px */
             height: 100vh;
             background-color: #52de97;
             z-index: 999;
@@ -161,11 +161,12 @@
         }
 
         .neon-circle {
-            width: 100px;
-            height: 100px;
+            width: 120px; /* Changed width to 120px */
+            height: 120px; /* Changed height to 120px */
             background-color: #00918e;
             border-radius: 50%;
-            margin: 20px auto;
+            margin: 20px;
+            display: inline-block;
             position: relative;
             overflow: hidden;
         }
@@ -233,16 +234,14 @@
         }
 
         .neon-circle-project {
-            width: 100px;
-            height: 100px;
+            width: 200px; /* Changed width to 200px */
+            height: 200px; /* Changed height to 200px */
             background-color: #00918e;
-            border-radius: 10px;
-            margin: 20px auto;
+            border-radius: 10px; /* Added border-radius */
+            margin: 50px auto; /* Increased margin */
             position: relative;
             overflow: hidden;
-            border: 5px solid #52de97; /* Добавлены рамка и тень */
-            box-shadow: 0 0 10px #52de97, 0 0 20px #52de97, 0 0 30px #52de97,
-                        0 0 40px #52de97, 0 0 50px #52de97, 0 0 75px #52de97;
+            border: 5px solid #52de97; /* Added border */
         }
 
         .neon-circle-project img {
@@ -251,16 +250,30 @@
             object-fit: cover;
         }
 
+        .neon-circle-project h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 5px;
+        }
+
         .click-text {
             color: #29a19c;
             text-decoration: underline;
             cursor: pointer;
         }
 
+        .left,
+        .right {
+            background-color: #52de97;
+            box-shadow: 0 0 20px #52de97, 0 0 40px #52de97, 0 0 60px #52de97, 0 0 80px #52de97; /* Added box-shadow */
+        }
+
     </style>
 </head>
 
 <body>
+    <div class="left"></div>
+    <div class="right"></div>
     <div class="container">
         <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">
             <img src="https://i.ibb.co.com/Yk4W2jJ/Whats-App-2024-04-16-21-41-43-e359514d.jpg" alt="Whats-App-2024-04-16-21-41-43-e359514d" class="image-frame">
@@ -282,6 +295,17 @@
     <div class="text-box">
         <h1>About me</h1>
         <h2>Maecenas ipsum velit, consectetuer eu, lobortis ut, dictum at, dui. In rutrum. Sed ac dolor sit amet purus malesuada congue. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Suspendisse sagittis ultrices augue. Mauris metus. Nunc dapibus tortor vel mi dapibus sollicitudin. Etiam posuere lacus quis dolor. Praesent id justo in neque elementum ultrices. Class aptent taciti sociosqu ad litora torquent per conubia.</h2>
+    </div>
+
+    <div class="text-box">
+        <h1>My Projects</h1>
+        <h2>I have a project and it's a game about immunity! In this game you play as respected leukocytes and drive out rival viruses! And this is an IvV game</h2>
+        <a href="https://github.com/A11DaR/IvVgame/commit/e50f268bfa3a94914536a2ee7168e9e720174acf">
+            <div class="neon-circle-project">
+                <img src="https://i.ibb.co.com/sjDRCr9/photo-2024-03-07-22-26-40.jpg" alt="photo-2024-03-07-22-26-40">
+            </div>
+        </a>
+        <p class="click-text" onclick="window.location.href='https://github.com/A11DaR/IvVgame/commit/e50f268bfa3a94914536a2ee7168e9e720174acf'">Click on the text to start the game!</p>
     </div>
 
     <div class="text-box">
@@ -316,17 +340,6 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="projects-box">
-        <h1>My Projects</h1>
-        <h2>I have a project and it's a game about immunity! In this game you play as respected leukocytes and drive out rival viruses! And this is an IvV game</h2>
-        <div class="neon-circle-project">
-            <a href="https://github.com/A11DaR/IvVgame/commit/e50f268bfa3a94914536a2ee7168e9e720174acf">
-                <img src="https://i.ibb.co.com/sjDRCr9/photo-2024-03-07-22-26-40.jpg" alt="photo-2024-03-07-22-26-40">
-            </a>
-        </div>
-        <p class="click-text" onclick="window.location.href='https://github.com/A11DaR/IvVgame/commit/e50f268bfa3a94914536a2ee7168e9e720174acf'">Click on the text to start the game!</p>
     </div>
 
     <script>
