@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <title>Alidar</title>
@@ -12,44 +11,38 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            position: relative;
         }
-
         .container {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
         }
-
         .image-frame {
             border: 10px solid #52de97;
             margin-right: 40px;
             box-shadow: 0 0 10px #52de97, 0 0 20px #52de97, 0 0 30px #52de97,
                 0 0 40px #52de97, 0 0 50px #52de97, 0 0 75px #52de97;
         }
-
         h1,
         h2 {
             margin: 0;
         }
-
         h1 {
             font-size: 3em;
             color: #52de97;
             text-shadow: 0 0 10px #52de97, 0 0 20px #52de97, 0 0 30px #52de97,
                 0 0 40px #52de97, 0 0 50px #52de97, 0 0 75px #52de97;
         }
-
         h2 {
             font-size: 2em;
         }
-
         .neon-green {
             color: #52de97;
             text-shadow: 0 0 10px #52de97, 0 0 20px #52de97, 0 0 30px #52de97,
                 0 0 40px #52de97, 0 0 50px #52de97, 0 0 75px #52de97;
         }
-
         .more-info {
             display: block;
             margin-top: 20px;
@@ -65,7 +58,6 @@
             box-shadow: 0 0 10px #52de97, 0 0 20px #52de97, 0 0 30px #52de97,
                 0 0 40px #52de97, 0 0 50px #52de97, 0 0 75px #52de97;
         }
-
         .cell-button {
             display: block;
             width: 50px;
@@ -81,7 +73,6 @@
             left: 0;
             margin: auto;
         }
-
         .cell {
             width: 50px;
             height: 50px;
@@ -91,7 +82,6 @@
             box-shadow: 0 0 10px #fac0e1, 0 0 20px #fac0e1, 0 0 30px #fac0e1,
                 0 0 40px #fac0e1, 0 0 50px #fac0e1, 0 0 75px #fac0e1;
         }
-
         .cell-inner-circle {
             width: 25px;
             height: 25px;
@@ -102,55 +92,50 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
         @keyframes shake {
             0% {
                 transform: translate(0, 0);
             }
-
             50% {
                 transform: translate(1px, 1px);
             }
-
             100% {
                 transform: translate(-1px, -1px);
             }
         }
-
         .cell {
             animation: shake 0.05s infinite alternate;
         }
-
         .left,
         .right,
         .neon-green-line {
             position: fixed;
-            width: 10px; /* Changed width to 10px */
-            height: 100vh;
+            width: 10px;
+            height: 100%;
             background-color: #52de97;
             z-index: 999;
         }
-
+        .left,
+        .right,
+        .neon-green-line {
+            text-shadow: 0 0 10px #52de97, 0 0 20px #52de97, 0 0 30px #52de97,
+                0 0 40px #52de97, 0 0 50px #52de97, 0 0 75px #52de97;
+        }
         .left {
             left: 0;
         }
-
         .right {
             right: 0;
         }
-
         .neon-green-line {
             background-color: #52de97;
         }
-
         .neon-green-line.left {
             left: 0;
         }
-
         .neon-green-line.right {
             right: 0;
         }
-
         .text-box {
             margin: 50px auto;
             max-width: 800px;
@@ -159,18 +144,17 @@
             border-radius: 10px;
             text-align: center;
         }
-
         .neon-circle {
-            width: 120px; /* Changed width to 120px */
-            height: 120px; /* Changed height to 120px */
+            width: 120px;
+            height: 120px;
             background-color: #00918e;
             border-radius: 50%;
             margin: 20px;
             display: inline-block;
             position: relative;
             overflow: hidden;
+            border: 5px solid #52de97;
         }
-
         .neon-circle:nth-child(1),
         .neon-circle:nth-child(2),
         .neon-circle:nth-child(3),
@@ -178,26 +162,22 @@
         .neon-circle:nth-child(7) {
             animation: neon-glow 1.5s infinite alternate;
         }
-
         @keyframes neon-glow {
             0% {
                 box-shadow: 0 0 10px #52de97, 0 0 20px #52de97, 0 0 30px #52de97,
                     0 0 40px #52de97, 0 0 50px #52de97, 0 0 75px #52de97;
             }
-
             100% {
                 box-shadow: 0 0 20px #52de97, 0 0 30px #52de97, 0 0 40px #52de97,
                     0 0 50px #52de97, 0 0 75px #52de97, 0 0 100px #52de97,
                     0 0 150px #52de97, 0 0 200px #52de97;
             }
         }
-
         .neon-circle:nth-child(4),
         .neon-circle:nth-child(6),
         .neon-circle:nth-child(8) {
             background-color: transparent;
         }
-
         .neon-circle:nth-child(4) h2,
         .neon-circle:nth-child(6) h2,
         .neon-circle:nth-child(8) h2 {
@@ -205,25 +185,20 @@
             text-align: center;
             margin-top: 5px;
         }
-
         .neon-circle:nth-child(4) h2 {
             margin-top: 10px;
         }
-
         .neon-circle:nth-child(6) h2 {
             margin-top: 0;
         }
-
         .neon-circle:nth-child(8) h2 {
             margin-top: 15px;
         }
-
         @media (max-width: 768px) {
             .text-box {
                 max-width: 90%;
             }
         }
-
         .projects-box {
             margin: 50px auto;
             max-width: 800px;
@@ -232,49 +207,77 @@
             border-radius: 10px;
             text-align: center;
         }
-
         .neon-circle-project {
-            width: 200px; /* Changed width to 200px */
-            height: 200px; /* Changed height to 200px */
+            width: 200px;
+            height: 200px;
             background-color: #00918e;
-            border-radius: 10px; /* Added border-radius */
-            margin: 50px auto; /* Increased margin */
+            border-radius: 10px;
+            margin: 50px auto;
             position: relative;
             overflow: hidden;
-            border: 5px solid #52de97; /* Added border */
+            border: 5px solid #52de97;
         }
-
         .neon-circle-project img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .neon-circle-project h2 {
             color: #ffffff;
             text-align: center;
             margin-top: 5px;
         }
-
         .click-text {
             color: #29a19c;
             text-decoration: underline;
             cursor: pointer;
         }
-
-        .left,
-        .right {
-            background-color: #52de97;
-            box-shadow: 0 0 20px #52de97, 0 0 40px #52de97, 0 0 60px #52de97, 0 0 80px #52de97; /* Added box-shadow */
+        .navigation-buttons {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            z-index: 1000;
         }
-
+        .navigation-button {
+            background-color: #000000;
+            color: #52de97;
+            border: 2px solid #52de97;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #52de97, 0 0 20px #52de97, 0 0 30px #52de97,
+                0 0 40px #52de97, 0 0 50px #52de97, 0 0 75px #52de97;
+        }
+        .navigation-button:hover {
+            transform: scale(1.1);
+            background-color: #52de97;
+            color: #000000;
+        }
+        .neon {
+            text-shadow: 0 0 10px #52de97, 0 0 20px #52de97, 0 0 30px #52de97,
+                0 0 40px #52de97, 0 0 50px #52de97, 0 0 75px #52de97;
+        }
     </style>
 </head>
-
 <body>
-    <div class="left"></div>
-    <div class="right"></div>
-    <div class="container">
+    <div class="navigation-buttons">
+        <a href="#alidar" class="navigation-button">My name is Alidar</a>
+        <a href="#about" class="navigation-button">About me</a>
+        <a href="#skills" class="navigation-button">My Skills</a>
+        <a href="#projects" class="navigation-button">My Projects</a>
+    </div>
+
+    <div class="left neon"></div>
+    <div class="right neon"></div>
+    <div id="alidar" class="container">
         <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">
             <img src="https://i.ibb.co.com/Yk4W2jJ/Whats-App-2024-04-16-21-41-43-e359514d.jpg" alt="Whats-App-2024-04-16-21-41-43-e359514d" class="image-frame">
         </a>
@@ -286,18 +289,14 @@
             <p class="neon-green">Tap! Tap!</p>
         </div>
     </div>
-
     <div id="cellContainer"></div>
-
     <div class="neon-green-line left"></div>
     <div class="neon-green-line right"></div>
-
-    <div class="text-box">
+    <div id="about" class="text-box">
         <h1>About me</h1>
         <h2>Maecenas ipsum velit, consectetuer eu, lobortis ut, dictum at, dui. In rutrum. Sed ac dolor sit amet purus malesuada congue. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Suspendisse sagittis ultrices augue. Mauris metus. Nunc dapibus tortor vel mi dapibus sollicitudin. Etiam posuere lacus quis dolor. Praesent id justo in neque elementum ultrices. Class aptent taciti sociosqu ad litora torquent per conubia.</h2>
     </div>
-
-    <div class="text-box">
+    <div id="skills" class="text-box">
         <h1>My Skills</h1>
         <div class="container">
             <div>
@@ -331,8 +330,9 @@
         </div>
     </div>
 
-    <div class="text-box">
+    <div id="projects" class="text-box">
         <h1>My Projects</h1>
+        <h2>I have a project and it's a game about immunity! In this game you play as respected leukocytes and drive out rival viruses! And this is an IvV game</h2>
         <h2>I have a project and it's a game about immunity! In this game you play as respected leukocytes and drive out rival viruses! And this is an IvV game.You always can read my paper on medium!I left the link in my github profile</h2>
         <a href="https://github.com/A11DaR/IvVgame/commit/e50f268bfa3a94914536a2ee7168e9e720174acf">
             <div class="neon-circle-project">
@@ -341,33 +341,26 @@
         </a>
         <p class="click-text" onclick="window.location.href='https://github.com/A11DaR/IvVgame/commit/e50f268bfa3a94914536a2ee7168e9e720174acf'">Click on the text to start the game!</p>
     </div>
-
     <script>
         const cellContainer = document.querySelector('#cellContainer');
         const cellButton = document.querySelector('#cellButton');
         let cellInterval;
         let cellsCreated = false;
-
         function createCell() {
             const cell = document.createElement('div');
             cell.classList.add('cell');
-
             const innerCircle = document.createElement('div');
             innerCircle.classList.add('cell-inner-circle');
             cell.appendChild(innerCircle);
-
             const randomX = Math.random() * window.innerWidth;
             const randomY = Math.random() * window.innerHeight;
             cell.style.left = `${randomX}px`;
             cell.style.top = `${randomY}px`;
-
             cellContainer.appendChild(cell);
         }
-
         function stopCreatingCells() {
             clearInterval(cellInterval);
             cellsCreated = true;
-
             const cells = document.querySelectorAll('.cell');
             let index = 0;
             const burstInterval = setInterval(() => {
@@ -382,13 +375,10 @@
                 }
             }, 100);
         }
-
         function startCreatingCells() {
             cellInterval = setInterval(createCell, 100);
-
             setTimeout(stopCreatingCells, 10000);
         }
-
         cellButton.addEventListener('click', () => {
             if (!cellsCreated) {
                 startCreatingCells();
@@ -398,7 +388,17 @@
                 startCreatingCells();
             }
         });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
-
 </html>
